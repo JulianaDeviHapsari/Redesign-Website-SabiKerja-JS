@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up Talent</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="dist/tailwind.css">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            ul{ list-style-type: square;}
+        </style>  
+    </head>
+    <body>
+        <section class="section-login-1 flex flex-col justify-center items-center py-20">
+            <img class="w-[490px] h-[490px] object-cover" src="assets/LOGO 2 PNG.png">
+            <h1 class="text-center text-[64px] font-bold text-[#EC6227]">Sign up</h1>
+            <p class="text-center text-[32px] font-semibold text-[#3B3533] mb-[40px]">as a</p>
+            <div class="flex gap-[20px]">
+                <button type="button" id="talentBtn" class="w-[292px] h-[62px] text-[32px] font-medium text-[#EC6227] text-border border-[2px] rounded-[10px] border-[#EC6227] focus:bg-[#EC6227] focus:text-white">Talent</button>
+                <button type="button" id="recruiterBtn" class="w-[292px] h-[62px] text-[32px] font-medium text-[#EC6227] text-border border-[2px] rounded-[10px] border-[#EC6227] focus:bg-[#EC6227] focus:text-white">Recruiter</button>
+            </div>
+            <form id="talentForm" class="flex flex-col items-center mt-[90px]">
+                <div class="flex w-[700px] mb-[66px] flex gap-[20px]">
+                    <div class ="w-[340px]">
+                        <p class="font-medium text-[32px] text-[#3B3533] text-left">First Name</p>
+                        <input type="First name" 
+                            placeholder="First name" 
+                            class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px] text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                            required>
+                    </div>
+                    <div class ="w-[340px]">
+                        <p class="font-medium text-[32px] text-[#3B3533] text-left">Last Name</p>
+                        <input type="Last name" 
+                            placeholder="Last name" 
+                            class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px] text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                            required>
+                    </div>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Current organitazion</p>
+                    <input type="Current organitazion" 
+                        placeholder="Current organitazion" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px] text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Position / Interest</p>
+                    <input type="Position / Interest" 
+                        placeholder="Position / Interest" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px] text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Email</p>
+                    <input type="Email" 
+                        placeholder="name@example.com" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px] text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Phone Number</p>
+                    <input type="Phone number" 
+                        placeholder="+62 888 888 888" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px] text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <label class="font-medium text-[32px] pb-[18px] text-[#3B3533] text-left">Upload CV (Optional)</label>
+                    <div class="relative border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 transition-all cursor-pointer mt-[18px]">
+                        <input type="file" 
+                               id="cvUpload1" 
+                               accept=".pdf,.doc,.docx" 
+                               class="hidden"
+                               onchange="handleFileSelect(event, 'fileName1')">
+                        <label for="cvUpload1" class="cursor-pointer">
+                            <svg class="w-full h-12 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                            </svg>
+                            <p class="font-regular text-[30px] text-[#3B3533] ">Click to upload or drag your CV here</p>
+                            <p class="font-regular text-[30px] text-[#3B3533]/30">PDF, DOC, DOCX. Max 10 MB.</p>
+                        </label>
+                        
+                        <p id="fileName1" class="mt-4 text-blue-600 font-medium hidden"></p>
+                    </div>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Upload CV ( Optional )</p>
+                    <input type="Upload CV" 
+                        placeholder="Upload Cv" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px] text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Password</p>
+                    <input type="Password" 
+                        placeholder="Password" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px] text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[96px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Confirm Password</p>
+                    <input type="Confirm Password" 
+                        placeholder="Type Password" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px] text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <button type="submit" 
+                    class="w-[700px] h-[90px] bg-[#A61E23] text-white text-[40px] font-semibold rounded-[10px] hover:bg-[#8a1a1f] transition-all ">
+                    Sign Up
+                </button>
+                <p class="text-[32px] font-regular text-[#3B3533] mt-[34px] mb-[34px]">Or</p>
+            <button class="text-[#A61E23] border border-[#A61E23] rounded-[10px] text-[40px] font-semibold w-[700px] h-[104px] mb-[40px] hover:bg-[#A61E23] hover:text-white transition-all">
+                <i class="fa-brands fa-google mr-[10px]"></i>
+                Sign up with Google
+            </button>
+            <button class="text-[#A61E23] border border-[#A61E23] rounded-[10px] text-[40px] font-semibold w-[700px] h-[104px] mb-[40px] hover:bg-[#A61E23] hover:text-white transition-all">
+                <i class="fa-brands fa-linkedin mr-[10px]"></i>
+                Sign up with LinkedIn
+            </button>
+            <p class="text-[#3B3533] font-regular text-[32px] mb-[60px]">
+                Do you alreadey have an account? 
+                <a href="http://127.0.0.1:3000/login.html" class="text-[#EC6227] font-bold underline hover:no-underline">Sign In</a>
+            </p>
+            </form>
+            <form id="recruiterForm" class="flex flex-col items-center mt-[90px] hidden">
+                <div class="flex w-[700px] mb-[66px] flex gap-[20px]">
+                    <div class="w-[340px]">
+                    <p class="font-medium text-[32px] text-[#3B3533] text-left">First Name</p>
+                    <input type="text" 
+                            placeholder="First name"
+                            class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                    text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                            required>
+                    </div>
+                    <div class="w-[340px]">
+                    <p class="font-medium text-[32px] text-[#3B3533] text-left">Last Name</p>
+                    <input type="text" 
+                            placeholder="Last name"
+                            class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                    text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                            required>
+                    </div>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Current Organization</p>
+                    <input type="email" 
+                        placeholder="Current organization" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Title</p>
+                    <input type="email" 
+                        placeholder="Sales Manager" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Company email</p>
+                    <input type="email" 
+                        placeholder="sales@example.com" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Phone Number</p>
+                    <input type="tel" 
+                        placeholder="+62 888 888 888" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Message</p>
+                    <input type="text" 
+                        placeholder="Write down your inquiries" 
+                        class="w-full h-[300px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[66px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Company Website</p>
+                    <input type="url" 
+                        placeholder="https://example.com"
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+
+                <div class="w-[700px] mb-[96px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Password</p>
+                    <input type="password" 
+                        placeholder="Type password" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+                <div class="w-[700px] mb-[96px]">
+                    <p class="font-medium text-[32px] mb-[18px] text-[#3B3533] text-left">Confirm password</p>
+                    <input type="password" 
+                        placeholder="Type password" 
+                        class="w-full h-[90px] border bg-[#D9D9D9] rounded-[10px] pl-[20px]
+                                text-[30px] font-medium text-[#666666] placeholder:text-[#666666]" 
+                        required>
+                </div>
+
+                <button type="submit" 
+                        class="w-[700px] h-[90px] bg-[#A61E23] text-white text-[40px]
+                                font-semibold rounded-[10px] hover:bg-[#8a1a1f] transition-all">
+                    Sign Up
+                </button>
+                <p class="text-[32px] font-regular text-[#3B3533] mt-[34px] mb-[34px]">Or</p>
+            <button class="text-[#A61E23] border border-[#A61E23] rounded-[10px] text-[40px] font-semibold w-[700px] h-[104px] mb-[40px] hover:bg-[#A61E23] hover:text-white transition-all">
+                <i class="fa-brands fa-google mr-[10px]"></i>
+                Sign up with Google
+            </button>
+            <button class="text-[#A61E23] border border-[#A61E23] rounded-[10px] text-[40px] font-semibold w-[700px] h-[104px] mb-[40px] hover:bg-[#A61E23] hover:text-white transition-all">
+                <i class="fa-brands fa-linkedin mr-[10px]"></i>
+                Sign up with LinkedIn
+            </button>
+            <p class="text-[#3B3533] font-regular text-[32px] mb-[60px]">
+                Do you alreadey have an account? 
+                <a href="http://127.0.0.1:3000/login.html" class="text-[#EC6227] font-bold underline hover:no-underline">Sign In</a>
+            </p>
+            </form>
+            <a href="index.html" class="flex items-center gap-3 text-[#3B3533] font-regular text-[32px] mb-[84px] hover:text-[#EC6227] transition-colors">
+                <img class="w-[48px] h-[48px]" src="assets/arrow-sm-left-svgrepo-com (1).svg" alt="Back">
+                    Back to Home
+            </a>
+        </section>
+        <script src="js/signup-talent/switch.js"></script>
+    </body>

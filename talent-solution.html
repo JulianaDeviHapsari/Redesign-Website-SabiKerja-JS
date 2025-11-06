@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Talent Solution</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="dist/tailwind.css">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            ul{ list-style-type: square;}
+        </style>  
+    </head>
+
+    <body>
+        <header class="'header flex justify-between items-center h-140 px-10 py-[46px] bg-white border border-[#EC6227]">
+            <a href="http://127.0.0.1:3000/index.html#"><img src="assets/LOGO 1 PNG.png" class="logo"></a>
+            <nav class="nav flex items-center space-x-12 text-[20px] font-regular text-[#3B3533] ">
+                <a class="active:text-[#A61E23] active:font-bold" href="http://127.0.0.1:3000/index.html">Home</a>
+                <a class="font-bold text-[#A61E23]" href="http://127.0.0.1:3000/talent-solution.html">Talent Solution</a>
+                <a class="active:text-[#A61E23] active:font-bold" href="http://127.0.0.1:3000/company-solution.html">Company Solution</a>
+                <a class="active:text-[#A61E23] active:font-bold" href="#">Blog</a>
+                <a class="active:text-[#A61E23] active:font-bold" href="#">Contact Us</a>
+                <div class="ml-14">
+                <a href="http://127.0.0.1:3000/login.html"><button class="bg-[#C24A27] ml-3 text-white h-[46px] w-[110px] rounded-lg font-bold">Login</button></a>
+                </div>
+            </nav>
+        </header>
+        <section class="section-talent-1 items-center text-center mt-[52px]">
+            <h1 class="font-bold text-[96px] text-[#EC6227]">
+                Solusi Lengkap <span class="font-bold text-[96px] text-[#3B3533]">
+                    untuk <br> Bekal Profesionalmu
+                </span>
+            </h1>"
+            <p class="text-[#3B3533] font-regular text-[36px] mt-[58px]"> Transform your career journey with AI-powered tools and expert guidance</p>
+            <p class="text-[#3B3533] font-bold text-[36px] mt-[26px]">Start your success story today!</p>
+        </section>
+        <section class="section-talent-2 mt-[146px] justify-items-center mx-10 ">
+            <div class="grid grid-cols-2 gap-[40px]">
+                <div class="text-center items-center justify-center bg-[#FAD6B1] w-[850px] h-[476px] rounded-[20px] px-[44px] py-[62px]">
+                    <p class="text-[#EC6227] font-bold text-[64px] ">
+                        Talk to Our Consultant
+                    </p>
+                    <p class="text-[#3B3533] font-bold text-[32px] mt-[88px]">
+                        Get personalized career strategy and unlock hidden opportunities
+                    </p>
+                    <button onclick="openModal()" class="bg-[#A61E23] rounded-[20px] text-white text-[32px] w-[756px] h-[78px] font-bold mt-[30px]">
+                        Schedule Consultation
+                    </button>
+                    <div id="overlay" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
+                        <div class="bg-white rounded-[10px] shadow-lg w-[778px] h-[1364+60px]">
+                            <div class="ml-[692px] mt-[40px]">
+                                <a onclick="closeModal()"><img class="w-[48px] h-[48px] cursor-pointer hover:bg-[#3B3533]/20 hover:rounded-[10px]" src="assets/cross-svgrepo-com.svg"></img></a>
+                            </div>
+                            <h2 class="text-[30px] font-bold text-[#3B3533] mt-[80px]">Book a Consultation</h2>
+                            <p class="text-[20px] font-medium text-[#3B3533] mt-[24px]">Jadwalkan Pertemuan dengan Pakar Karir Kami</p>
+                            <form id="bookingForm" class="flex flex-col px-[64px] mt-[104px]">
+                                
+                                    <div class="text-[#3B3533] text-[20px] text-left mb-[40px] w-full">
+                                        <p class="text-[#3B3533] font-bold text-[20px] text-left mb-[16px]">
+                                            First Name
+                                        </p>
+                                        <input type="First name" 
+                                            placeholder="First name" 
+                                            class="w-full h-[44px] border bg-[#D9D9D9] rounded-[4px] py-[10px] pl-[14px] text-[20px] font-regular text-[#666666] placeholder:text-[#666666]" 
+                                            required>
+                                    </div>
+                                    <div class="text-[#3B3533] text-[20px] text-left mb-[40px] w-full">
+                                        <p class="text-[#3B3533] font-bold text-[20px] text-left mb-[16px]">
+                                            Last Name
+                                        </p>
+                                        <input type="Last name" 
+                                            placeholder="Last name" 
+                                            class="w-full h-[44px] border bg-[#D9D9D9] rounded-[4px] py-[10px] pl-[14px] text-[20px] font-regular text-[#666666] placeholder:text-[#666666]" 
+                                            required>
+                                    </div>
+                                <div class="text-[#3B3533] text-[20px] text-left justify-start items-left w-full">
+                                        <p class="text-[#3B3533] font-bold text-[20px] text-left mb-[16px]">
+                                            Company
+                                        </p>
+                                        <input type="Company name" 
+                                            placeholder="Company name" 
+                                            class="w-full h-[44px] border bg-[#D9D9D9] rounded-[4px] py-[10px] pl-[14px] text-[20px] font-regular text-[#666666] placeholder:text-[#666666]" 
+                                            required>
+                                </div>
+                                <div class="text-[#3B3533] text-[20px] text-left justify-start items-left mt-[40px] w-full">
+                                        <p class="text-[#3B3533] font-bold text-[20px] text-left mb-[16px]">
+                                            Email
+                                        </p>
+                                        <input type="Your email" 
+                                            placeholder="Your email" 
+                                            class="w-full h-[44px] border bg-[#D9D9D9] rounded-[4px] py-[10px] pl-[14px] text-[20px] font-regular text-[#666666] placeholder:text-[#666666]" 
+                                            required>
+                                </div>
+                                <div class="text-[#3B3533] text-[20px] text-left justify-start items-left mt-[40px] w-full">
+                                        <p class="text-[#3B3533] font-bold text-[20px] text-left mb-[16px]">
+                                            Phone Number
+                                        </p>
+                                        <input type="number" 
+                                            placeholder="+62 888 888 888" 
+                                            class="w-full h-[44px] border bg-[#D9D9D9] rounded-[4px] py-[10px] pl-[14px] text-[20px] font-regular text-[#666666] placeholder:text-[#666666]" 
+                                            required>
+                                </div>
+                                 <div class="relative inline-block w-full mt-[56px]">
+                                <button type="button" id="dropdownButton"
+                                class="w-full flex justify-between items-center bg-[#D9D9D9] text-[#666666]
+                                        px-4 py-2 rounded-[10px] focus:outline-none">
+                                <span id="selectedOption">Select Inquiry</span>
+                                <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                                </button>
+
+                                <ul id="dropdownMenu"
+                                class="hidden absolute z-10 mt-1 w-full bg-white border border-gray-300
+                                        rounded-b-[10px] shadow-lg">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">General Inquiry</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Career Guidance</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">CV Review</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Job Search Strategy</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Interview Preparation</li>
+                                </ul>
+
+                                <!-- Hidden input buat validasi -->
+                                <input type="hidden" id="inquiryInput" name="inquiry" required>
+                            </div>
+                            <button type="submit" class="w-[652px] h-[78px] text-white bg-[#A61E23] rounded-[20px] text-[24px] font-bold mt-[300px] mb-[64px]">Book a Meeting</button>
+                        </form>
+                            <div id="successModal" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+                                <div class="bg-white rounded-xl p-6 w-80 text-center shadow-lg animate-scaleIn">
+                                    <!-- <div class="mx-auto mb-3 w-12 h-12 flex items-center justify-center bg-green-100 text-green-600 rounded-full">
+                                        ✅
+                                    </div> -->
+                                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Berhasil!</h2>
+                                    <p class="text-gray-600 mb-4">Meeting kamu sudah berhasil dijadwalkan.</p>
+                                    <button 
+                                        onclick="closeSuccessModal()" 
+                                        class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                                        Oke
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="text-center items-center justify-center bg-[#FAD6B1] w-[850px] h-[476px] rounded-[20px] px-[44px] py-[62px]">
+                    <p class="text-[#EC6227] font-bold text-[64px] ">
+                        AI-Powered CV Analysis
+                    </p>
+                    <p class="text-[#3B3533] font-bold text-[32px] mt-[88px]">
+                        Instant feedback to make your resume irresistible to recruiters
+                    </p>
+                    <button class="bg-[#A61E23] rounded-[20px] text-white text-[32px] w-[756px] h-[78px] font-bold mt-[30px]">
+                        Analyze CV
+                    </button>
+                </div>
+                <div class="text-center items-center justify-center bg-[#FAD6B1] w-[850px] h-[476px] rounded-[20px] px-[44px] py-[34px]">
+                    <p class="text-[#EC6227] font-bold text-[64px] ">
+                        Exclusive Job Opportunities
+                    </p>
+                    <p class="text-[#3B3533] font-bold text-[32px] mt-[24px]">
+                        Access premium positions that match your ambitions perfectly
+                    </p>
+                    <button class="bg-[#A61E23] rounded-[20px] text-white text-[32px] w-[756px] h-[78px] font-bold mt-[30px]">
+                        Schedule Consultation
+                    </button>
+                </div>
+                <div class="text-center items-center justify-center bg-[#FAD6B1] w-[850px] h-[476px] rounded-[20px] px-[44px] py-[62px]">
+                    <p class="text-[#EC6227] font-bold text-[64px] ">
+                        Elite Career Network
+                    </p>
+                    <p class="text-[#3B3533] font-bold text-[32px] mt-[88px]">
+                        Connect with industry leaders and accelerate your career growth
+                    </p>
+                    <button class="bg-[#A61E23] rounded-[20px] text-white text-[32px] w-[756px] h-[78px] font-bold mt-[30px]">
+                        Schedule Consultation
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="mx-10 mt-[200px] text-center">
+            <h2 class="text-[48px] font-bold text-[#EC6227] text-center justify-items-center">
+                Upgrade Dirimu,<span class="text-[48px] font-bold text-[#3B3533]">Tingkatkan Profesionalismemu.</span>  
+            </h2>
+            <p class="text-[#3B3533] text-regular text-[36px] mt-[20px]">
+                Temukan solusi lengkap untuk mengembangkan karier, keterampilan,<br> dan potensimu bersama para ahli.
+            </p>
+            <p class="text-[#EC6227] font-bold text-[36px] mt-[40px]">
+                Paket Talent Accelerator
+            </p>
+            <div class="flex justify-items-center mt-[60px] text-center items-center justify-center gap-[60px]">
+                <div id="card1" onclick="selectCard(this)" class="card1 rounded-[10px] w-[414px] h-[970px] shadow-xl border-[0.1px] border-[#34A853]/50 pt-[34px] px-[20px] text-center items-center justify-center transition-all duration-500 hover: box-shadow: 20px 20px 20px 30px-[#EC6227] hover:scale-110 hover:border-[#34A853] ">
+                    <p class="text-[#34A853] text-[36px] font-semibold mt-[30px]">
+                        Starter
+                    </p>
+                    <p class="text-[#3B3533] font-bold text-[20px] mt-[30px]">
+                        quis sollicitudin. quam placerat faucibus non, libero, nisl.
+                    </p>
+                    <p class="text-[#3B3533] font-regular text-[20px]">
+                        quis sollicitudin. quam placerat faucibus non, libero, nisl. Nam tincidunt luctus elit nec gravida eu id tincidunt elit. in Ut faucibus at ultrices tincidunt 
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] flex gap-[10px] mt-[72px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[252px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
+                </div>
+                <div id="card2" onclick="selectCard(this)" class="card2 rounded-[10px] w-[414px] h-[970px] shadow-xl border-[0.1px] border-[#2980F1]/50 pt-[34px] px-[20px] text-center items-center justify-center transition-all duration-500 hover: box-shadow: 20px 20px 20px 30px-[#EC6227] hover:scale-110 hover:border-[#2980F1] ">
+                    <p class="text-[#2980F1] text-[36px] font-semibold mt-[30px]">
+                        Basic
+                    </p>
+                    <p class="text-[#3B3533] font-bold text-[20px] mt-[30px]">
+                        quis sollicitudin. quam placerat faucibus non, libero, nisl.
+                    </p>
+                    <p class="text-[#3B3533] font-regular text-[20px]">
+                        quis sollicitudin. quam placerat faucibus non, libero, nisl. Nam tincidunt luctus elit nec gravida eu id tincidunt elit. in Ut faucibus at ultrices tincidunt 
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] flex gap-[10px] mt-[72px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[252px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
+                </div>
+                <div id="card3" onclick="selectCard(this)" class="card3 rounded-[10px] w-[414px] h-[970px] shadow-xl border-[0.1px] border-[#5F22C9]/50 pt-[34px] px-[20px] text-center items-center justify-center transition-all duration-500 hover: box-shadow: 20px 20px 20px 30px-[#EC6227] hover:scale-110 hover:border-[#5F22C9] ">
+                    <p class="text-[#5F22C9] text-[36px] font-semibold mt-[30px]">
+                        Pro
+                    </p>
+                    <p class="text-[#3B3533] font-bold text-[20px] mt-[30px]">
+                        quis sollicitudin. quam placerat faucibus non, libero, nisl.
+                    </p>
+                    <p class="text-[#3B3533] font-regular text-[20px]">
+                        quis sollicitudin. quam placerat faucibus non, libero, nisl. Nam tincidunt luctus elit nec gravida eu id tincidunt elit. in Ut faucibus at ultrices tincidunt 
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] flex gap-[10px] mt-[72px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[252px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
+                </div>
+                <div id="card4" onclick="selectCard(this)" class="card4 rounded-[10px] w-[414px] h-[970px] shadow-xl border-[#6E4F08]/50 border-[0.1px] pt-[34px] px-[20px] text-center items-center justify-center transition-all duration-500 hover: box-shadow: 20px 20px 20px 30px-[#EC6227] hover:scale-110 hover:border-[#6E4F08]">
+                    <p class="text-[#6E4F08] text-[36px] font-semibold mt-[30px]">
+                        Elite
+                    </p>
+                    <p class="text-[#3B3533] font-bold text-[20px] mt-[30px]">
+                        quis sollicitudin. quam placerat faucibus non, libero, nisl.
+                    </p>
+                    <p class="text-[#3B3533] font-regular text-[20px]">
+                        quis sollicitudin. quam placerat faucibus non, libero, nisl. Nam tincidunt luctus elit nec gravida eu id tincidunt elit. in Ut faucibus at ultrices tincidunt 
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] flex gap-[10px] mt-[72px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <p class="text-[#3B3533] ml-[10px] font-regular text-[20px] mt-[28px] flex gap-[10px]">
+                        <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
+                        Lorem Ipsum
+                    </p>
+                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[252px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
+                </div>
+            </div>
+        </section>
+        <section class="section-talent-3 justify-items-center justify-center items-center text-center mt-[60px] mx-10">
+            <h2 class="text-[#EC6227] font-semibold text-[60px]">
+                Bingung mau pilih paket yang mana?
+            </h2>
+            <p class="text-[#3B3533] font-regular text-[36px] mt-[20px]">
+                Talent Advisor kami siap membantu Anda mencari tahu.
+            </p>
+            <button class="bg-[#A61E23] text-white w-[684px] h-[104px] rounded-[10px] font-semibold text-[40px] mt-[70px] justify-center justify-items-center items-center text-center">
+                Chat dengan talent Advisor
+            </button>
+        </section>
+        <section class="section-talent-4 mx-10 mt-[200px] items-center justify-center">
+            <h2 class="text-[#EC6227] text-[60px] font-semibold text-center">
+                Apa yang mereka katakan<span class="text-[#3B3533]"> tentang kami?</span>
+            </h2>
+            
+            <!-- Carousel Container -->
+            <div class="relative w-full max-w-[1800px] mx-auto mt-[150px] min-h-[700px]">
+                
+                <!-- Carousel Wrapper -->
+                <div class="overflow-hidden">
+                    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                        
+                        <!-- SLIDE 1 (3 cards pertama) -->
+                        <div class=" flex gap-[48px] px-10 justify-center mx-auto h-[800px] items-center justify-end">
+                            <!-- Card 1 -->
+                            <div class="relative group flex-shrink-0 w-[542px]">
+                                <img src="assets/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" class="rounded-full absolute -top-[128px] left-1/2 transform -translate-x-1/2 w-[230px] h-[230px] border border-[1px] border-[#A61E23]">
+                                <img src="https://sabikerja.com/lovable-uploads/7d51568a-c3d7-4499-8f1b-9e48742c3664.png" class="rounded-full absolute -top-[-6px] right-[120px] w-[100px] h-[100px] border border-[2px] border-[#A61E23]">
+
+                                <div class="border border-[#EC6227] rounded-[10px] text-center pt-[176px] pb-[34px]">
+                                    <p class="text-[#3B3533] text-[24px] font-bold mx-[34px]">Maria S.</p>
+                                    <p class="text-[#3B3533] text-[20px] font-regular mx-[34px]">Multinational Healthcare Leader</p>
+                                    <p class="mt-[20px] text-[#3B3533] text-[20px] font-regular mx-[34px]">Sabikerja memberikan layanan yang sangat baik. Selama bekerja sama dengan beberapa headhunter, mereka termasuk yang paling responsif dan dapat diandalkan dalam mengirimkan kandidat-kandidat berkualitas.</p>
+                                    <div class="flex items-center justify-center mt-[20px] gap-[10px] mb-[40px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="relative group flex-shrink-0 w-[542px]">
+                                <img src="assets/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" class="rounded-full absolute -top-[128px] left-1/2 transform -translate-x-1/2 w-[230px] h-[230px] border border-[1px] border-[#A61E23]">
+                                <img src="https://sabikerja.com/lovable-uploads/7d51568a-c3d7-4499-8f1b-9e48742c3664.png" class="rounded-full absolute -top-[-6px] right-[120px] w-[100px] h-[100px] border border-[2px] border-[#A61E23]">
+
+                                <div class="border border-[#EC6227] rounded-[10px] text-center pt-[176px] pb-[34px]">
+                                    <p class="text-[#3B3533] text-[24px] font-bold mx-[34px]">John Doe</p>
+                                    <p class="text-[#3B3533] text-[20px] font-regular mx-[34px]">Tech Director</p>
+                                    <p class="mt-[20px] text-[#3B3533] text-[20px] font-regular mx-[34px]">Sabikerja memberikan layanan yang sangat baik. Selama bekerja sama dengan beberapa headhunter, mereka termasuk yang paling responsif dan dapat diandalkan dalam mengirimkan kandidat-kandidat berkualitas.</p>
+                                    <div class="flex items-center justify-center mt-[20px] gap-[10px] mb-[40px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="relative group flex-shrink-0 w-[542px]">
+                                <img src="assets/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" class="rounded-full absolute -top-[128px] left-1/2 transform -translate-x-1/2 w-[230px] h-[230px] border border-[1px] border-[#A61E23]">
+                                <img src="https://sabikerja.com/lovable-uploads/7d51568a-c3d7-4499-8f1b-9e48742c3664.png" class="rounded-full absolute -top-[-6px] right-[120px] w-[100px] h-[100px] border border-[2px] border-[#A61E23]">
+
+                                <div class="border border-[#EC6227] rounded-[10px] text-center pt-[176px] pb-[34px]">
+                                    <p class="text-[#3B3533] text-[24px] font-bold mx-[34px]">Siti Nurhaliza</p>
+                                    <p class="text-[#3B3533] text-[20px] font-regular mx-[34px]">HR Manager</p>
+                                    <p class="mt-[20px] text-[#3B3533] text-[20px] font-regular mx-[34px]">Sabikerja memberikan layanan yang sangat baik. Selama bekerja sama dengan beberapa headhunter, mereka termasuk yang paling responsif dan dapat diandalkan dalam mengirimkan kandidat-kandidat berkualitas.</p>
+                                    <div class="flex items-center justify-center mt-[20px] gap-[10px] mb-[40px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 2 (Card 4) - Duplikat card 1 kalau mau slide kedua -->
+                        <div class="min-w-full flex gap-[48px] px-10 h-[800px] items-center justify-end">
+                            <div class="relative group flex-shrink-0 w-[542px] ">
+                                <img src="assets/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" class="rounded-full absolute -top-[128px] left-1/2 transform -translate-x-1/2 w-[230px] h-[230px] border border-[1px] border-[#A61E23]">
+                                <img src="https://sabikerja.com/lovable-uploads/7d51568a-c3d7-4499-8f1b-9e48742c3664.png" class="rounded-full absolute -top-[-6px] right-[120px] w-[100px] h-[100px] border border-[2px] border-[#A61E23]">
+
+                                <div class="border border-[#EC6227] rounded-[10px] text-center pt-[176px] pb-[34px]">
+                                    <p class="text-[#3B3533] text-[24px] font-bold mx-[34px]">Ahmad Hidayat</p>
+                                    <p class="text-[#3B3533] text-[20px] font-regular mx-[34px]">Operations Manager</p>
+                                    <p class="mt-[20px] text-[#3B3533] text-[20px] font-regular mx-[34px]">Sabikerja memberikan layanan yang sangat baik. Selama bekerja sama dengan beberapa headhunter, mereka termasuk yang paling responsif dan dapat diandalkan dalam mengirimkan kandidat-kandidat berkualitas.</p>
+                                    <div class="flex items-center justify-center mt-[20px] gap-[10px] mb-[40px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                        <img src="assets/star-svgrepo-com.svg" class="w-[25px] h-[25px]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 bg-white rounded-full p-4 shadow-lg hover:bg-gray-100 transition-all z-10">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 bg-white rounded-full p-4 shadow-lg hover:bg-gray-100 transition-all z-10">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Dot Indicators -->
+            <div id="dots" class="flex justify-center gap-3">
+                <!-- Generated by JavaScript -->
+            </div>
+
+        </section>
+        <section class="section-talent-5 mt-[96px]">
+            <div class="bg-[#EC6227] w-full h-[479px] flex items-center justify-center gap-[530px]">
+                <h2 class="text-white text-[60px] font-semibold">Siap untuk direkrut dengan <br> mudah?</h2>
+                <a href="http://127.0.0.1:3000/login.html"><button class="bg-white text-[#A61E23] text-[36px] font-semibold rounded-[10px] w-[380px] h-[104px]">Masuk Sekarang</button></a>
+        </section>
+        <section class="section8 relative pb-[172px] overflow-hidden ">
+            <div class="absolute mb-[172px] -bottom-20 -left-[700px] w-[1304px] h-[1304px] bg-[#EC6227] rounded-full opacity-40"></div>
+            <div class="absolute mb-[172px] -top-[-200px] -right-[900px] w-[1304px] h-[1304px] bg-[#EC6227] rounded-full opacity-40"></div>
+            <div class="mt-[80px] mx-10 mb-[80px] flex items-center justify-end gap-[18px]">
+                <button id="button-en" class="button-en w-[90px] h-[60px] text-[#EC6227] text-[24px] font-medium bg-white rounded-[4px] border border-[1px] border-[#EC6227] focus:bg-[#EC6227] focus:text-white">ID</button>
+                <button id="button-en" class="button-en w-[90px] h-[60px] text-[#EC6227] text-[24px] font-medium bg-white rounded-[4px] border border-[1px] border-[#EC6227] focus:bg-[#EC6227] focus:text-white">EN</button>
+            </div>
+            <div class="relative z-10 flex justify-center gap-[72px] mt-[90px] mx-10 ">
+                <a href="http://127.0.0.1:3000/index.html"><img src="assets/LOGO 2 PNG.png" class="w-[456px] h-[240px] object-cover mr-[264px]"></a>
+                <div class="flex flex-col gap-[16px] text-[24px] font-regular text-[#3B3533]">
+                    <p class="text-[24px] font-semibold text-[#3B3533]">About Us</p>
+                    <a class="" href="">SabiKerja</a>
+                    <a class="" href="">Contact</a>
+                </div>
+                <div class="flex flex-col gap-[16px] text-[24px] font-regular text-[#3B3533]">
+                    <p class="text-[24px] font-semibold text-[#3B3533]">For Employers</p>
+                    <a class="" href="">Schedule Consultation</a>
+                    <a class="" href="">Try AI Consultant</a>
+                </div>
+                <div class="flex flex-col gap-[16px] text-[24px] font-regular text-[#3B3533]">
+                    <p class="text-[24px] font-semibold text-[#3B3533]">For Talents</p>
+                    <a class="pointer" href="">Talk to Our Consultant</a>
+                    <a class="" href="">AI-Powered CV Analysis</a>
+                    <a class="" href="">Exclusive Job Opportunities</a>
+                    <a class="" href="">Elite Career Network</a>
+                </div>
+                <div class="flex flex-col gap-[16px] text-[24px] font-regular text-[#3B3533]">
+                    <p class="text-[24px] font-semibold text-[#3B3533]">Social Media</p>
+                    <a href="https://facebook.com" target="_blank" class="w-12 h-12 bg-[#EC6227] rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#EC6227] transition-all hover:scale-110">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://gmail.com" target="_blank" class="w-12 h-12 bg-[#EC6227] rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#EC6227] transition-all hover:scale-110">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sabikerja/" target="_blank" class="w-12 h-12 bg-[#EC6227] rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#EC6227] transition-all hover:scale-110">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <script src="js/talent-solution/carousel.js"></script>
+        <script src="js/talent-solution/hovercard.js"></script>
+        <script src="js/talent-solution/openmodal.js"></script>
+        <script src="js/talent-solution/modal.js"></script>
+    </body>
