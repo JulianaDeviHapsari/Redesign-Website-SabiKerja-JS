@@ -8,7 +8,7 @@ Redesign SabiKerja web using HTML, Tailwind CSS, & JS
 
 ## Screenshots
 
-![Redesign SabiKerja Website](https://github.com/JulianaDeviHapsari/disney-app/blob/main/Screenshot%202025-07-18%20115313.png)
+![Redesign SabiKerja Website](https://github.com/JulianaDeviHapsari/Redesign-Website-SabiKerja-JS/blob/master/Screenshot%202025-11-06%20133519.png)
 
 ## Tech Stack
 
