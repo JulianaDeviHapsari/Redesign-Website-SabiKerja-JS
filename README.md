@@ -1,14 +1,14 @@
-#Redesign Website SabiKerja
+# SabiKerja Website Redesign
 
-Redesign SabiKerja web using HTML, Tailwind CSS, & JS 
+SabiKerja Website Redesign using HTML, Tailwind CSS, & JS 
 
 ## Demo
 
-[Redesign SabiKerja Website](https://redesign-website-sabi-kerja-js.vercel.app/)
+[SabiKerja Website Redesign](https://redesign-website-sabi-kerja-js.vercel.app/)
 
 ## Screenshots
 
-![Redesign SabiKerja Website](https://github.com/JulianaDeviHapsari/Redesign-Website-SabiKerja-JS/blob/master/Screenshot%202025-11-06%20133519.png)
+![SabiKerja Website Redesign](https://github.com/JulianaDeviHapsari/Redesign-Website-SabiKerja-JS/blob/master/Screenshot%202025-11-06%20133519.png)
 
 ## Tech Stack
 
