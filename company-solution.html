@@ -7,12 +7,26 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="icon" type="image/png" size="32x32" href="assets/LOGO 2 PNG.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            montserrat: ['Montserrat', 'sans-serif'],
+                        },
+                    },
+                },
+            }
+        </script>
         <style>
             ul{ list-style-type: square;}
         </style>  
     </head>
 
-    <body>
+    <body class="font-montserrat">
         <header class="'header flex justify-between items-center h-140 px-10 py-[46px] bg-white border border-b-[#EC6227]">
             <a href="http://127.0.0.1:3000/index.html"><img src="assets/LOGO 1 PNG.png" class="logo"></a>
             <nav class="nav flex items-center space-x-12 text-[20px] font-regular text-[#3B3533] ">

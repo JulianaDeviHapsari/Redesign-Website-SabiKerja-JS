@@ -7,12 +7,26 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="icon" type="image/png" size="32x32" href="assets/LOGO 2 PNG.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            montserrat: ['Montserrat', 'sans-serif'],
+                        },
+                    },
+                },
+            }
+        </script>
         <style>
             ul{ list-style-type: square;}
         </style>  
     </head>
 
-    <body>
+    <body class="font-montserrat">
         <header class="'header flex justify-between items-center h-140 px-10 py-[46px] bg-white border border-b-[#EC6227]">
             <a href="http://127.0.0.1:3000/index.html#"><img src="assets/LOGO 1 PNG.png" class="logo"></a>
             <nav class="nav flex items-center space-x-12 text-[20px] font-regular text-[#3B3533] ">
@@ -146,11 +160,11 @@
                     </div>
                 
                 </div>
-                <div class="text-center items-center justify-center bg-[#FAD6B1] w-[850px] h-[476px] rounded-[20px] px-[44px] py-[62px]">
+                <div class="text-center items-center justify-center bg-[#FAD6B1] w-[850px] h-[476px] rounded-[20px] px-[44px] py-[34px]">
                     <p class="text-[#EC6227] font-bold text-[64px] ">
                         AI-Powered CV Analysis
                     </p>
-                    <p class="text-[#3B3533] font-bold text-[32px] mt-[88px]">
+                    <p class="text-[#3B3533] font-bold text-[32px] mt-[24px]">
                         Instant feedback to make your resume irresistible to recruiters
                     </p>
                     <button class="bg-[#A61E23] rounded-[20px] text-white text-[32px] w-[756px] h-[78px] font-bold mt-[30px]">
@@ -218,7 +232,7 @@
                         <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
                         Lorem Ipsum
                     </p>
-                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[252px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
+                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[232px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
                 </div>
                 <div id="card2" onclick="selectCard(this)" class="card2 rounded-[10px] w-[414px] h-[970px] shadow-xl border-[0.1px] border-[#2980F1]/50 pt-[34px] px-[20px] text-center items-center justify-center transition-all duration-500 hover: box-shadow: 20px 20px 20px 30px-[#EC6227] hover:scale-110 hover:border-[#2980F1] ">
                     <p class="text-[#2980F1] text-[36px] font-semibold mt-[30px]">
@@ -246,7 +260,7 @@
                         <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
                         Lorem Ipsum
                     </p>
-                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[252px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
+                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[232px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
                 </div>
                 <div id="card3" onclick="selectCard(this)" class="card3 rounded-[10px] w-[414px] h-[970px] shadow-xl border-[0.1px] border-[#5F22C9]/50 pt-[34px] px-[20px] text-center items-center justify-center transition-all duration-500 hover: box-shadow: 20px 20px 20px 30px-[#EC6227] hover:scale-110 hover:border-[#5F22C9] ">
                     <p class="text-[#5F22C9] text-[36px] font-semibold mt-[30px]">
@@ -274,7 +288,7 @@
                         <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
                         Lorem Ipsum
                     </p>
-                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[252px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
+                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[232px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
                 </div>
                 <div id="card4" onclick="selectCard(this)" class="card4 rounded-[10px] w-[414px] h-[970px] shadow-xl border-[#6E4F08]/50 border-[0.1px] pt-[34px] px-[20px] text-center items-center justify-center transition-all duration-500 hover: box-shadow: 20px 20px 20px 30px-[#EC6227] hover:scale-110 hover:border-[#6E4F08]">
                     <p class="text-[#6E4F08] text-[36px] font-semibold mt-[30px]">
@@ -302,7 +316,7 @@
                         <img src="assets/check-svgrepo-com (1).svg" class="w-[30px] h-[30px]">
                         Lorem Ipsum
                     </p>
-                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[252px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
+                    <button class="text-[#EC6227] font-medium text-[30px] border border-[#EC6227] border-[4px] rounded-[10px] w-[360px] h-[70px] mt-[232px] hover:bg-[#EC6227] hover:text-white">Lihat Detail</button>
                 </div>
             </div>
         </section>

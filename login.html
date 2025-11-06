@@ -7,11 +7,25 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="icon" type="image/png" size="32x32" href="assets/LOGO 2 PNG.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            montserrat: ['Montserrat', 'sans-serif'],
+                        },
+                    },
+                },
+            }
+        </script>
         <style>
             ul{ list-style-type: square;}
         </style>  
     </head>
-    <body>
+    <body class="font-montserrat">
         <section class="section-login-1 flex flex-col justify-center items-center py-20">
             <a href="http://127.0.0.1:3000/index.html"><img class="w-[490px] h-[490px] object-contain" src="assets/LOGO 2 PNG.png"></a>
             <h1 class="text-center text-[64px] font-bold text-[#EC6227]">Sign In</h1>
